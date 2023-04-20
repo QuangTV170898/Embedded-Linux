@@ -13,7 +13,7 @@ void timer_callback_0(void *arg)
 
 int main()
 {
-    TimerHandle_t *timer_0 = TimerCreate("Timer0", 1000, true, &timer_callback_0);
+    TimerHandle_t *timer_0 = TimerCreate("Timer0", 1000, true, timer_callback_0);
     TimerStart(timer_0);
 
     sleep(10);

@@ -6,8 +6,8 @@
 #include <stdint.h>
 
 
-struct Timer_t;
-typedef struct Timer_t  TimerHandle_t;
+struct TimerDefinition;
+typedef struct TimerDefinition  TimerHandle_t;
 
 typedef void (*TimerCallbackFunction_t)(void *);
 

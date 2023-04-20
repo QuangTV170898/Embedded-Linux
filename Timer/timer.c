@@ -6,9 +6,9 @@
 #include <string.h>
 #include <time.h>
 
-typedef void (*TimerCallbackFunction_t)(void *);
+#include "timer.h"
 
-typedef struct
+typedef struct TimerDefinition
 {
     char *name;
     int period_ms;
@@ -17,7 +17,9 @@ typedef struct
     TimerCallbackFunction_t callback;
     int running;
     pthread_t thread;
-} Timer_t;
+} TIMER;
+
+typedef TIMER Timer_t;
 
 static void *_timer_process(void *arg)
 {
